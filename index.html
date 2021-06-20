@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOWO And Softness</title>
+  <!--tailwind-->
+  <link rel="stylesheet" href="dist/tailwind.css">
+  <!--swiper-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!--aos-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--C3-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.css">
+  <link rel="stylesheet" href="dist/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="home__loading js-home__loading">
+    <div class="home__inner">
+      <img src="img/icon/logo-2.svg" alt="">
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__main flex flex-wrap">
+      <a href="./index.html" class="header__logo"><img src="img/icon/logo-2.svg" alt=""></a>
+      <div class="header__menu js-header__menu flex flex-wrap">
+        <a class="md:text-lg" href="javascript:;">menu</a>
+        <div class="header__burger bg-primary ml-5">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <ul class="menu__list">
+        <li class="menu__item"><a class="menu__link font-serif text-center | md:text-left" href="index.html">Home</a>
+        </li>
+        <li class="menu__item"><a class="menu__link font-serif text-center | md:text-left"
+            href="product.html">Products</a></li>
+        <li class="menu__item">
+          <a class="menu__link font-serif text-center | md:text-left" href="cart.html">Cart</a>
+          <div class="js-CartNum"></div>
+        </li>
+        <li class="menu__item"><a class="menu__link font-serif text-center | md:text-left" href="admin.html">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="homeBanner" data-aos="zoom-out-up" data-aos-duration="2000">
+      <div class="homeBanner__title text-primary">
+        <h2 class="font-serif">And</h2>
+        <h2 class="font-serif">Softness</h2>
+      </div>
+      <div class="homeBanner__img">
+        <img class="object-cover" src="img/banner/banner.jpg" alt="">
+        <span class="text-lg">居家．品味．生活</span>
+      </div>
+    </div>
+
+    <div class="advantage">
+      <div class="wrap">
+        <div class="advantage__main" data-aos="fade-up">
+          <div class="title flex flex-wrap">
+            <div class="side mr-10"></div>
+            <h2 class="text-2xl text-primary font-serif">Advantage</h2>
+          </div>
+          <div class="advantage__content">
+            <span class="text-lg mt-2.5">床 墊 優 勢</span>
+            <ul class="advantage__list | lg:flex lg:flex-wrap">
+              <li class="advantage__item mb-7.5 | md:mb-10 | lg:w-1/3">
+                <div class="advantage__itemContent advantage__itemContent1 | md:p-5">
+                  <div class="advantage__itemInner text-right | lg:flex lg:flex-wrap lg:text-left">
+                    <div class="flex flex-wrap justify-end | lg:block mb-2">
+                      <h3 class=" text-lg text-white mr-1 font-serif | lg:mr-0">Environmental</h3>
+                      <h3 class="text-lg text-white mr-1 font-serif | sm:mr-2 | lg:mr-0">Protection</h3>
+                    </div>
+                    <h2 class="text-white">原 木 料 環 保</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="advantage__item mb-7.5 | md:mb-10 | lg:w-1/3 lg:mt-20">
+                <div class="advantage__itemContent advantage__itemContent2 md:p-5">
+                  <div class="advantage__itemInner | lg:flex lg:flex-wrap ">
+                    <h3 class="text-lg text-white mb-2 font-serif">Storage</h3>
+                    <h2 class="text-white">好 收 納</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="advantage__item | lg:w-1/3 lg:mt-40">
+                <div class="advantage__itemContent advantage__itemContent3 md:p-5">
+                  <div class="advantage__itemInner text-right | lg:flex lg:flex-wrap lg:text-left">
+                    <h3 class="text-lg text-white mb-2 mr-1 font-serif | sm:mr-2 | lg:mr-0">Assembly</h3>
+                    <h2 class="text-white">好 組 裝</h2>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="wrap">
+        <div class="compare__main" data-aos="zoom-in">
+          <div class="title flex flex-wrap">
+            <div class="side mr-10"></div>
+            <h2 class="text-2xl text-primary font-serif">Compare</h2>
+          </div>
+          <div class="compare__content">
+            <span class="text-lg mt-2.5">家 具 比 較</span>
+            <div class="compare__table">
+              <div class="compare__lines">
+                <div class="compare__line"></div>
+                <div class="compare__line"></div>
+                <div class="compare__line"></div>
+              </div>
+              <ul class="compare__list flex flex-wrap">
+                <li class="compare__item flex flex-wrap">
+                  <div class="w-1/4">
+                    <h4></h4>
+                  </div>
+                  <div class="w-1/4">
+                    <h4 class="compare__txt text-primary px-2 py-8| md:px-4">窩窩系統模組家具</h4>
+                  </div>
+                  <div class="w-1/4">
+                    <h4 class="px-2 py-8 | md:px-4">組合式家具</h4>
+                  </div>
+                  <div class="w-1/4">
+                    <h4 class="px-2 py-8 | md:px-4">實木家具</h4>
+                  </div>
+                </li>
+                <li class="compare__item flex flex-wrap">
+                  <div class="w-1/4">
+                    <div class="px-2 py-8 text-sm | md:px-4 md:text-base">可單人自行組裝</div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="py-8">
+                      <div class="compare__txt true"></div>
+                    </div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="py-8">
+                      <div class="not text-white">不一定</div>
+                    </div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="py-8">
+                      <div class="error"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="compare__item flex flex-wrap">
+                  <div class="w-1/4">
+                    <div class="px-2 py-8 text-sm | md:px-4 md:text-base">可多次重複拆裝</div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="compare__txt true py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="error py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="error py-8"></div>
+                  </div>
+                </li>
+                <li class="compare__item flex flex-wrap">
+                  <div class="w-1/4">
+                    <div class="px-2 py-8 text-sm | md:px-4 md:text-base">床墊規格彈性大</div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="compare__txt true py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="not py-8 text-white">不一定</div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="not py-8 text-white">不一定</div>
+                  </div>
+                </li>
+                <li class="compare__item flex flex-wrap">
+                  <div class="w-1/4">
+                    <div class="px-2 py-8 text-sm | md:px-4 md:text-base">材質可長久使用</div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="compare__txt true py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="error py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="true py-8"></div>
+                  </div>
+                </li>
+                <li class="compare__item flex flex-wrap">
+                  <div class="w-1/4">
+                    <div class="px-2 py-8 text-sm | md:px-4 md:text-base">小客車即可搬運</div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="compare__txt true py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="error py-8"></div>
+                  </div>
+                  <div class="w-1/4">
+                    <div class="error py-8"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recommend">
+      <div class="wrap">
+        <div class="recommend__main">
+          <div class="title flex flex-wrap">
+            <div class="side mr-10"></div>
+            <h2 class="text-2xl text-white font-serif">Recommend</h2>
+          </div>
+          <div class="recommend__content">
+            <span class="text-lg mt-2.5 text-white">好 評 推 薦</span>
+          </div>
+        </div>
+      </div>
+      <div class="recommend__slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-1.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-1.png" alt="">
+                    <h3 class="text-lg ml-3">王六角</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Jordan 雙人床架</span>
+                  <p>CP值很高。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-2.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-2.png" alt="">
+                    <h3 class="text-lg ml-3">Leaf</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Antony 雙人床架</span>
+                  <p>很喜歡～還有送三年保固～</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-3.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-3.png" alt="">
+                    <h3 class="text-lg ml-3">美濃鄧子琪</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Charies 系列儲物組合</span>
+                  <p>廚房必備美用品 !</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-4.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-4.png" alt="">
+                    <h3 class="text-lg ml-3">isRaynotArray</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Antony 遮光窗簾</span>
+                  <p>物超所值 !</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-5.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-5.png" alt="">
+                    <h3 class="text-lg ml-3">程鮭魚</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Louvre 單人床架</span>
+                  <p>租屋用剛剛好</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-8.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-6.png" alt="">
+                    <h3 class="text-lg ml-3">小杰</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Louvre 雙人床架</span>
+                  <p>非常舒適，有需要會再回購</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-6.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-7.png" alt="">
+                    <h3 class="text-lg ml-3">江八角</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Charies 雙人床架</span>
+                  <p>品質不錯～</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-7.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-8.png" alt="">
+                    <h3 class="text-lg ml-3">Juni讚神</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Antony 床邊桌</span>
+                  <p>讚ㄉ !</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-5.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-9.png" alt="">
+                    <h3 class="text-lg ml-3">久安說安安</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Louvre 單人床架</span>
+                  <p>一個人躺剛剛好。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="recommend__sliderCard flex flex-wrap">
+                <div class="recommend__sliderMedia" style="background-image: url(img/bg/recommend-bg-2.jpg);">
+                </div>
+                <div class="recommend__sliderContent">
+                  <div class="sliderContent__title flex flex-wrap">
+                    <img src="img/icon/recommend-10.png" alt="">
+                    <h3 class="text-lg ml-3">PeiQun</h3>
+                  </div>
+                  <span class="mt-3 mb-2">Antony 雙人床架</span>
+                  <p>睡起來很舒適</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__content text-center py-7.5">
+        <p class="text-white | md:text-lg">Copyright © woworoom All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+    integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+    integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+    crossorigin="anonymous"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+
+  <!-- gasp -->
+  <script>
+    gsap.to('.homeBanner__title', {
+      scrollTrigger: {
+        trigger: '.homeBanner',
+        start: 'top top',
+        end: 'bottom center',
+        scrub: 0.5,
+      },
+      y: "-50%",
+      opacity: 0
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+// cart
+
+.cart__banner {
+  position: relative;
+  justify-content: center;
+  min-height: 200px;
+  align-items: center;
+  @include mq(md) {
+    min-height: 300px;
+    align-items: flex-end;
+  }
+  h1 {
+    font-size: 80px;
+    @include mq(md) {
+      font-size: 100px;
+    }
+  }
+}
+
+.cart__main {
+  padding: 30px;
+  @include mq(sm) {
+    padding: 40px 60px;
+  }
+  @include mq(md) {
+    padding: 60px 80px;
+  }
+  @include mq(xl) {
+    padding: 80px 100px;
+  }
+}
+
+.cart__step {
+  background-color: #fff;
+}
+
+.cart__stepList {
+  margin-left: -20px;
+  margin-bottom: -20px;
+  @include mq(md) {
+    margin-left: -25px;
+    margin-bottom: -25px;
+  }
+  @include mq(xl) {
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+.cart__stepItem {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  @include mq(md) {
+    padding-left: 25px;
+    padding-bottom: 25px;
+  }
+  @include mq(xl) {
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.cart__stepInner {
+  align-items: center;
+  @include mq(xl) {
+    border-right: 1px solid $gray-300;
+  }
+  @include mq($until:xl) {
+    border-bottom: 1px solid $gray-300;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.cart__stepInner4 {
+  border-right: none;
+}
+
+.cart__stepContent {
+  span {
+    display: inline-block;
+    color: $gray-100;
+  }
+}
+
+.cart__project {
+  width: 100%;
+  @include mq(lg) {
+    width: calc(100% - 50px);
+  }
+  @include mq(xl) {
+    width: calc(100% - 60px);
+  }
+  >span {
+    display: inline-block;
+  }
+  .cart__box {
+    @include mq($until:lg){
+      display: none;
+    }
+  }
+}
+
+.cart__item {
+  &:not(:first-child) {
+    @include mq(lg) {
+      border-top: 1px solid $gray-300;
+    }
+  }
+}
+
+.cart__inner {
+  position: relative;
+  align-items: center;
+  @include mq(lg) {
+    padding: 30px 0;
+  }
+  .delete {
+    transition: all .3s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+    &:hover {
+      background-color: $primary;
+    }
+  }
+  span {
+    display: inline-block;
+  }
+}
+
+.cart__innerItem {
+  width: 100%;
+  @include mq(lg) {
+    width: calc(100% - 50px);
+  }
+  @include mq(xl) {
+    width: calc(100% - 60px);
+  }
+  img {
+    width: 100%;
+    @include mq(md) {
+      width: 120px;
+    }
+    @include mq(xl) {
+      width: 100px;
+    }
+  }
+}
+
+.cart__box {
+  @include mq($until:lg) {
+    border: 1px solid $gray-300;
+    padding: 1rem 1.25rem;
+  }
+}
+
+.cart__box {
+  position: relative;
+  &::before {
+    @include mq($until:lg) {
+      content: attr(data-title);
+      display: block;
+      color: $gray-100;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.cart__change {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: $white;
+  color: $white;
+  border-radius: 50%;
+  padding: 10px;
+  transition: box-shadow .3s ease;
+  @include mq($until:lg) {
+    background-color: #fafafa;
+  }
+  &:hover {
+    box-shadow: 0 0 5px 2px rgba(140, 140, 140, 0.64);
+  }
+}
+
+.cart__remove {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    width: 13px;
+    height: 2px;
+    background-color: $primary;
+    @include mq($until:lg) {
+      top: 24px;
+      left: 58px;
+    }
+  }
+}
+.cart__add {
+  &::before,&::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 48px;
+    width: 13px;
+    height: 2px;
+    background-color: $primary;
+    @include mq($until:lg) {
+      top: 24px;
+      left: 96px;
+    }
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.cart__delete {
+  width: 40px;
+  @include mq(md) {
+    width: 50px;
+  }
+  @include mq(xl) {
+    width: 60px;
+  }
+}
+
+.delete {
+  position: absolute;
+  display: block;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #222222;
+  cursor: pointer;
+  @include mq(md) {
+    width: 28px;
+    height: 28px;
+  }
+  @include mq($until:lg) {
+    top: 16px;
+    right: 16px;
+  }
+  @include mq(xl) {
+    width: 32px;
+    height: 32px;
+  }
+  &::before,&::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: $white;
+    width: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include mq(md) {
+      width: 13px;
+    }
+    @include mq(xl) {
+      width: 15px;
+    }
+  }
+  &::before {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  } 
+  &::after {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+}
+
+.deleteAll {
+  position: relative;
+  background-color: #222222;
+  padding: 16px 32px;
+  border-radius: 6px;
+  transition: all .3s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+  &::before,&::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: $white;
+    width: 11px;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    @include mq(md) {
+      width: 13px;
+    }
+    @include mq(xl) {
+      width: 15px;
+    }
+  }
+  &::before {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  } 
+  &::after {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  &:hover {
+    background-color: $primary;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-danger {
+  color: #dc3545;
+  text-align: left;
+  padding-top: 16px;
+}
+
+// cart end
+
+// order
+
+.order {
+  background-color: #222222;
+}
+
+.order__content {
+  padding: 60px 0 80px 0;
+  @include mq(md) {
+    padding: 80px 0 100px 0;
+  }
+}
+
+.form__group {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+}
+
+.form__control {
+  display: block;
+  width: 100%;
+  outline:none;
+  background-color: #222222;
+  border-bottom: 1px solid $gray-100;
+  padding: 12px 20px 12px 0;
+}
+
+.is-focus {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  font-size: 0.75rem;
+  color: $gray-100;
+}
+
+.submitBtn {
+  padding: 14px 42px;
+  border-radius: 6px;
+  transition: all .3s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+  &:hover {
+    background-color: $lightblue;
+    color: #222222;
+  }
+}
+
+// order end

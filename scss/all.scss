@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Lexend&family=Noto+Sans+TC:wght@400;500&display=swap');
+
+@import 'config/mixins';
+@import 'config/normalize';
+@import 'config/reboot';
+@import 'config/sass-mq';
+@import 'config/variables';
+
+@import 'pages/index';
+@import 'pages/product';
+@import 'pages/cart';
+@import 'pages/admin';
+
+@import 'layout/loading';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/wrap';
+
+@import 'plugin/aos';
+
+

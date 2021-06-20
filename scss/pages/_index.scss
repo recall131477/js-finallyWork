@@ -1,0 +1,511 @@
+// banner 
+
+.homeBanner {
+  position: relative;
+  height: 100vh;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #222222;
+    right: 0;
+    bottom: 44px;
+    z-index: 2;
+    @include mq(md) {
+      width: 100px;
+    }
+    @include mq(xl) {
+      width: 120px;
+    }
+  }
+}
+
+.homeBanner__title {
+  @include positionA(50%,50%);
+  transform:translate(-50%,-50%) rotate(-90deg);
+  font-size: 6.25rem;
+  z-index: 10;
+  h2 {
+    &:last-child {
+      margin-left: 70px;
+    }
+    @include mq(md) {
+      font-size: 9.375rem;
+      &:last-child {
+        margin-left: 110px;
+      }
+    }
+    @include mq(xl) {
+      font-size: 12.25rem;
+      &:last-child {
+        margin-left: 145px;
+      }
+    }
+  }
+}
+
+.homeBanner__img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include mq(md) {
+    width: calc(100% - 80px);
+  }
+  @include mq(xl) {
+    width: calc(100% - 100px);
+  }
+  img {
+    width: 100%;
+    height: 50vh;
+  }
+  span {
+    position: absolute;
+    right: 40px;
+    bottom: 34px;
+  }
+}
+
+
+// banner end
+
+// advantage
+
+.title {
+  align-items: center;
+  h2 {
+    font-size: 80px;
+    @include mq($until:sm) {
+      font-size: 40px;
+    }
+  }
+}
+
+.advantage {
+  padding: 80px 0;
+  @include mq(md) {
+    padding: 100px 0;
+  }
+  @include mq(xl) {
+    padding: 120px 0;
+  }
+}
+
+.side {
+  border-top: 2px solid #222222;
+  width: 100px;
+  @include mq(md) {
+    width: 120px;
+  }
+  @include mq(lg) {
+    width: 160px;
+  }
+}
+
+.advantage__content {
+  @include mq(xl) {
+    margin-left: 200px;
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 20px;
+    @include mq(md) {
+      margin-bottom: 40px;
+    }
+    @include mq(xl) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.advantage__list {
+  @include mq(lg) {
+    margin-left: -30px;
+  }
+  @include mq(xl) {
+    margin-left: -40px;
+  }
+}
+
+.advantage__item {
+  @include mq(sm) {
+    &:nth-child(1) {
+      margin-left: 100px;
+    }
+    &:nth-child(2) {
+      margin-right: 100px;
+    }
+    &:nth-child(3) {
+      margin-left: 100px;
+    }
+  }
+  @include mq(md) {
+    &:nth-child(1) {
+      margin-left: 160px;
+    }
+    &:nth-child(2) {
+      margin-right: 160px;
+    }
+    &:nth-child(3) {
+      margin-left: 160px;
+    }
+  }
+  @include mq(lg) {
+    padding-left: 30px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-left: 0;
+    }
+  }
+  @include mq(xl) {
+    padding-left: 40px;
+  }
+}
+
+.advantage__itemContent {
+  @include bg;
+  opacity: 0.8;
+  @include mq(lg){
+    opacity: 1;
+    height: 640px;
+  }
+}
+
+.advantage__itemContent1 {
+  background-image: url(../../img/advantage/mobile-item1.jpg);
+  @include mq(lg) {
+    background-image: url(../../img/advantage/item1.jpg);
+  }
+}
+
+.advantage__itemContent2 {
+  background-image: url(../../img/advantage/mobile-item2.jpg);
+  @include mq(lg) {
+    background-image: url(../../img/advantage/item2.jpg);
+  }
+}
+
+.advantage__itemContent3 {
+  background-image: url(../../img/advantage/mobile-item3.jpg);
+  @include mq(lg) {
+    background-image: url(../../img/advantage/item3.jpg);
+  }
+}
+
+.advantage__itemInner {
+  justify-content: space-between;
+  padding: 67px 60px 93px 60px;
+  @include mq(md) {
+    padding: 67px 80px 93px 80px;
+  }
+  @include mq(lg) {
+    padding: 67px 100px 93px 100px;
+    border: solid 1px $white;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+  }
+  @include mq(xl) {
+    padding: 25px 20px;
+  }
+  h3 {
+    line-height: 1.5;
+  }
+  h2{
+    font-size: 24px;
+    letter-spacing: 4px;
+    @include mq(sm) {
+      letter-spacing: 8px;
+    }
+    @include mq(lg) {
+      font-size: 32px;
+      writing-mode: vertical-lr;
+    }
+  }
+}
+
+// advantage end
+
+// compare
+
+.compare {
+  margin-bottom: 160px;
+}
+
+.compare__content {
+  >span {
+    display: inline-block;
+    margin-bottom: 60px;
+    @include mq(md) {
+      margin-bottom: 80px;
+    }
+    @include mq(xl) {
+      margin-bottom: 100px;
+      margin-left: 200px;
+    }
+  }
+}
+
+.compare__table {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(212deg, #E2EEFF 0%, #FFF4E9 100%);
+    border-radius: 40px;
+    z-index: 3;
+    @include mq(xl) {
+      width: 360px;
+      height: 620px;
+    }
+  }
+}
+
+.compare__txt {
+  position: relative;
+  z-index: 4;
+}
+
+.compare__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.compare__line {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-right: 1px solid $gray-300;
+  &:nth-child(1) {
+    left: 25%;
+  }
+  &:nth-child(2) {
+    left: 50%;
+  }
+  &:nth-child(3) {
+    left: 75%;
+  }
+}
+
+.compare__list {
+  border: 1px solid $gray-300;
+  background-color: $white;
+  border-radius: 12px;
+}
+
+.compare__item {  
+  position: relative;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  &:first-child {
+    position: relative;
+    border-bottom: 1px solid $gray-300;
+    z-index: 5;
+  }
+  h4 {
+    font-size: 14px;
+    @include mq(md) {
+      font-size: 16px;
+    }
+    @include mq(lg) {
+      font-size: 18px;
+    }
+    @include mq(xl) {
+      font-size: 20px;
+    }
+  }
+}
+
+
+.true {
+    display: block;
+    margin: auto;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: $primary;
+    background-image: url(../../img/icon/tick.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include mq(md) {
+      width: 28px;
+      height: 28px;
+    }
+    @include mq(xl) {
+      width: 32px;
+      height: 32px;
+    }
+}
+
+.error {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #222222;
+  @include mq(md) {
+    width: 28px;
+    height: 28px;
+  }
+  @include mq(xl) {
+    width: 32px;
+    height: 32px;
+  }
+  &::before,&::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: $white;
+    width: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include mq(md) {
+      width: 13px;
+    }
+    @include mq(xl) {
+      width: 15px;
+    }
+  }
+  &::before {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  } 
+  &::after {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+}
+
+.not {
+  display: inline-block;
+  margin: auto;
+  width: 70px;
+  padding: 8px 0;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  background-color: #222222;
+  @include mq(md) {
+    width: 75px;
+  }
+  @include mq(xl) {
+    width: 80px;
+  }
+}
+
+
+// compare end
+
+// recommend
+
+.recommend {
+  position: relative;
+  background-image: url(../../img/bg/recommend.jpg);
+  @include bg;
+  padding-top: 80px;
+  padding-bottom: 110px;
+  @include mq(md) {
+    padding-top: 100px;
+    padding-bottom: 130px;
+  }
+  @include mq(xl) {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+}
+
+.recommend__main {
+  .side {
+    border-top: 1px solid $white;
+  }
+}
+
+.recommend__sliderCard {
+  position: relative;
+  background-color: $white;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.recommend__sliderMedia {
+  @include bg;
+  width: 150px;
+  @include mq($until:sm){
+    width: 100px;
+  }
+}
+
+.recommend__content {
+  >span {
+    display: inline-block;
+    margin-bottom: 60px;
+    @include mq(xl) {
+      margin-left: 200px; 
+    }
+  }
+}
+
+.recommend__slider {
+  position: relative;
+  .swiper-slide {
+    width: 70%;
+    @include mq(md) {
+      width: 50%;
+    }
+    @include mq(xl) {
+      width: 27.7777778%;
+    }
+  }
+}
+
+.recommend__sliderContent {
+  padding: 30px 20px 60px 20px;
+  flex: 1;
+  @include mq($until:sm) {
+    padding: 30px 10px;
+  }
+  span {
+    display: inline-block;
+    color: $gray-100;
+  }
+  p {
+    @include mq($until:sm) {
+      font-size: 14px;
+    }
+  }
+}
+
+.sliderContent__title {
+  margin-left: -50px;
+  align-items: center;
+  @include mq($until:sm) {
+    margin-left: -40px;
+  }
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.swiper-button-prev,.swiper-button-next {
+  color: $white;
+}
+
+
+// recommend end
