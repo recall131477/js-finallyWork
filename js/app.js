@@ -1,3 +1,4 @@
+// 解決瀏覽器觀看滿版問題
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
